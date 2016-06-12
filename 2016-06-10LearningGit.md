@@ -19,7 +19,7 @@ Git开发的初衷原则：
   ＃已修改表示修改了某个文件，但还没有提交保存
   ＃已暂存表示把已修改的文件放在下次提交的时要保存的清单中
 
-三、安装Ｇit
+# 三、安装Ｇit
 官方网站
 http://git-scm.com/download
 
@@ -40,13 +40,13 @@ git config --global user.email yshan0216@gmail.com
 git config --list
 
 
-第二章 Ｇit基础知识
+# 第二章 Ｇit基础知识
 1､取得项目的Git仓库
 ＃从当前目录初始化
 git init
 
 #添加一些文件然后提交
-git add *.c
+git add \*.c
 git add README
 git commit -m 'initial project version'
 
@@ -203,7 +203,7 @@ git remote rename pb paul
 #删除远程仓库
 git remote rm paul
 
-##打标签
+### 打标签
 
 #列出已有标签
 git tag
@@ -473,6 +473,7 @@ cat .git/hooks/post-update
 exec git-update-server-info
 #功能是当通过ssh向服务器推送时，Ｇit将运行这个命令来更新http获取所需的文件
 
+
 ＃配置apache
 <VirtualHost *:80>
   ServerName git.gitserver
@@ -482,6 +483,7 @@ exec git-update-server-info
     allow from all
   </Directory>
 </VirtualHost>
+
 
 #修改用户组
 chgrp -R www-data /opt/git
